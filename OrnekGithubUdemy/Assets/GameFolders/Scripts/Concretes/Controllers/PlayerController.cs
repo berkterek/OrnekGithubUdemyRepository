@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using OrnekGithubUdemy.Movements;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,14 +7,16 @@ namespace OrnekGithubUdemy.Controllers
 {
     public class PlayerController : MonoBehaviour
     {
+        Mover _mover;
+
         private void Awake()
         {
-            //player controller reference'lari cache'ler
+            _mover = new Mover(this);
         }
 
-        private void Start()
+        private void Update()
         {
-            //player controller reference'lariini cache'ledigi degsikenleri kullanir
+            _mover.Tick();
         }
     }
 }
