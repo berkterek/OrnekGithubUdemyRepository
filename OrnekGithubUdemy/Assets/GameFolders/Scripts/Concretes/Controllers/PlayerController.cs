@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+namespace OrnekGithubUdemy.Controllers
 {
-    // Start is called before the first frame update
-    void Start()
+    public class PlayerController : MonoBehaviour
     {
-        
-    }
+        private void Awake()
+        {
+            //player controller reference'lari cache'ler
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Start()
+        {
+            //player controller reference'lariini cache'ledigi degsikenleri kullanir
+        }
     }
 }
+
